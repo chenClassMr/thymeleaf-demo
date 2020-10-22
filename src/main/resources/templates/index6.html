@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <!--<link rel="stylesheet" href="static/css/my.css">-->
+    <link rel="stylesheet" th:href="@{css/my.css}">
+</head>
+<body>
+<!--第一种引入方法 include只拿内容-->
+<div th:include="~{head :: head}">
+
+</div>
+<!--第二种方式 insert div里面插入-->
+<div th:insert="~{head :: head}">
+
+</div>
+
+<!--第三种方式 replace div里面替换-->
+<div th:replace="~{head :: head}">
+
+</div>
+
+   <h1 class="h1" th:text="index6....页面"></h1>
+</body>
+</html>

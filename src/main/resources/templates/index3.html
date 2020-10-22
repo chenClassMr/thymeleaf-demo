@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+   ....index2...页面<br>
+    <table width="400px" style="text-align: center">
+        <tr>
+            <th>序号</th>
+            <th>用户的id</th>
+            <th>用户的名字</th>
+            <th>用户的年龄</th>
+        </tr>
+        <tr th:each="user,start:${userList}">
+            <!--索引，从索引下标0开始-->
+            <td th:text="${start.index+1}"></td>
+            <!--计算，从索引下标1开始-->
+            <!--<td th:text="${start.count}"></td>-->
+            <!--集合的大小-->
+            <!--<td th:text="${start.size}"></td>-->
+            <!--当前对象-->
+            <!--<td th:text="${start.current}"></td>-->
+            <!--奇偶-odd-true even-false-->
+            <!--<td th:text="${start.even}"></td>-->
+            <!--判断是不是第一个元素-->
+            <!--<td th:text="${start.first}"></td>-->
+            <!--判断是不是最后一个元素-->
+            <!--<td th:text="${start.last}"></td>-->
+            <td th:text="${user.id}"></td>
+            <td th:text="${user.name}"></td>
+            <td th:text="${user.age}"></td>
+        </tr>
+    </table>
+</body>
+</html>
