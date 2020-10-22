@@ -30,6 +30,7 @@ public class MyController {
         map.put("src1","6.jpg");
         map.put("src2","5.jpg");
         model.addAttribute("src",map);
+        System.out.println("=============");
         return "index2";
     }
 
